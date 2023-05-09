@@ -1,6 +1,6 @@
 # AWS R53 Domain IP refresh script
 
-This is a simple bash script I've adapted from a solution on StackOverflow, which updates your R53's hosted zone domain class A record with the current public IP address.
+This is a simple bash script I've adapted from a solution on StackOverflow, which updates your R53's hosted zone domains class A record with the current public IP address.
 
 I use crontab to run the script periodicly on my personal server since our ISP seems to randomly change the public IP address every few weeks and I suddenly lose access to my server! D:
 
