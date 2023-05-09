@@ -8,11 +8,11 @@ I use crontab to run the script periodicly on my personal server since our ISP s
 
 Change the following vairables to reflect the parameters of your hosted zone. 
 
-'''
+```
 DOMAIN_NAME=YOUR DOMAIN
 PUBLIC_RECORD=$DOMAIN_NAME
 R53_HOSTED_ZONE=HOSTED ZONE
-'''
+```
 
 I would also recommend creating a new AWS user in a locked-down security group to reduce the likelyhood of somebody stealing your hosted zone ID and gaining root access.
 
@@ -20,9 +20,9 @@ I would also recommend creating a new AWS user in a locked-down security group t
 
 To run the script periodicly with crontabm I would first recomend reading the documentation here. For my setup I have added the following line to my crontab file:
 
-'''
-[# Check for IP changes every 10 minutes]
-[*/30 * * * * /home/felix/aws/domain_refresh.sh]
-'''
+```
+# Check for IP changes every 10 minutes
+*/30 * * * * /home/felix/aws/domain_refresh.sh
+```
 
 Thank you to [Kaizen86](https://github.com/Kaizen86) for helping me with parsing the JSON output from aws! :D
